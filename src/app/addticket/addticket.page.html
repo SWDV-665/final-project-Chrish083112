@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+ 
+  <!-- Input with -->
+<ion-label> Officer:</ion-label> <ion-input [(ngModel)]="data.officer"  name="officer"></ion-input>
+<ion-label> Violation:</ion-label> <ion-input [(ngModel)]="data.violation"  name="violation"></ion-input>
+<ion-label> License plate:</ion-label> <ion-input  [(ngModel)]="data.licenseplate"  name="licenseplate"></ion-input>
+<ion-label> State:</ion-label> <ion-input [(ngModel)]="data.state"  name="state" ></ion-input>
+<ion-label> Make:</ion-label> <ion-input [(ngModel)]="data.make"  name="make"></ion-input>
+<ion-label> Model:</ion-label> <ion-input [(ngModel)]="data.model"  name="model" ></ion-input>
+<ion-label> Date:</ion-label> <ion-datetime value="YYYY-MM-DD" display-timezone="utc" [(ngModel)]="data.date"  name="date"></ion-datetime>
+<ion-label> Location:</ion-label> <ion-input  [(ngModel)]="data.location"  name="location"></ion-input>
+
+<ion-button size="large" (click)="checkdata()">Submit </ion-button>
+
+
+</ion-content>

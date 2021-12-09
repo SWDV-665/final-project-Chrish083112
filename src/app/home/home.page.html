@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Log In</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <strong>LOG IN</strong>
+  <br>
+  <form #f="ngForm" (ngSubmit)="loginForm(f)" novalidate>
+      <!-- Input with placeholder -->
+      <ion-label>Username:</ion-label> <ion-input  [(ngModel)]="data.username"  name="username"  ></ion-input>
+      <br>
+      <ion-label>Password:</ion-label><ion-input  [(ngModel)]="data.password" type="password" name="password" ></ion-input>
+      <br>
+      <ion-button size="large" type="ngSubmit">Log in </ion-button>
+    </form>
+</ion-content>

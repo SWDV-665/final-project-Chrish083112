@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>summary</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-label> Officer:</ion-label> <ion-label> {{this.dataservice.data.officer}}</ion-label>
+<br>
+<ion-label> Violation:</ion-label>  <ion-label> {{this.dataservice.data.violation}}</ion-label>
+<br>
+<ion-label> License plate:</ion-label> <ion-label> {{this.dataservice.data.licenceplate}}</ion-label>
+<br>
+<ion-label> State:</ion-label> <ion-label> {{this.dataservice.data.state}}</ion-label>
+<br>
+<ion-label> Make:</ion-label> <ion-label> {{this.dataservice.data.make}}</ion-label>
+<br>
+<ion-label> Model:</ion-label> <ion-label> {{this.dataservice.data.model}}</ion-label>
+<br>
+<ion-label> Date:</ion-label><ion-label> {{this.dataservice.data.date}}</ion-label>
+<br>
+<ion-label> Location:</ion-label> <ion-label> {{this.dataservice.data.location}}</ion-label>
+<br>
+<ion-grid>
+  <ion-row>
+    <ion-col
+     
+      size="6"
+      *ngFor="let photo of photoService.photos; index as position"
+    >
+      <ion-img [src]="photo.webviewPath"></ion-img>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<br>
+<ion-button size="large" (click)="addPhotoToGallery()" > Add Image </ion-button>
+</ion-content>
